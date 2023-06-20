@@ -43,7 +43,7 @@ export default function Register() {
 
   return (
     <div>
-      <h1>Registration form</h1>
+      <h2>Registration form</h2>
       <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
         <label className={css.label}>
           Name

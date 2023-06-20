@@ -11,9 +11,9 @@ export default function HeadNav () {
          <li className={css.li}>
            <NavLink to="/">Home</NavLink>
          </li>
-         {/* <li>
+         <li>
            <NavLink to="/login">Book</NavLink>
-         </li> */}
+         </li>
          <li>
            <NavLink to="/register">Register</NavLink>
          </li>

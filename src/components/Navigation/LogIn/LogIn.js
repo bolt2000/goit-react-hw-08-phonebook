@@ -40,8 +40,8 @@ export default function LoginForm() {
   };
 
   return (
-    <div>
-      <h1>Enter in account</h1>
+    <div className={css.form}>
+      <h2>Sign in</h2>
       <form className={css.form} onSubmit={handleSubmit} autoComplete="email">
         <label className={css.label}>
           Mail

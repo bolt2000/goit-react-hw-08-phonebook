@@ -6,7 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchCurrentUser } from 'redux/auth/auth-operations';
-// import PrivateRoute from './PrivateRoute';
+import PrivateRoute from './PrivateRoute';
 
 
 
@@ -32,16 +32,24 @@ export const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
 
-          {/* <PrivateRoute path="/book"><Book /></PrivateRoute> */}
+          {/* <PrivateRoute path="/book">
+              <Book />
+          </PrivateRoute> */}
 
-          <Route path="book" element={<Book />}/>
+          {/* <Route exact path="/login" element={<PrivateRoute />}>
+            <Route exact path="/book" element={<Book/>} />
+          </Route> */}
 
 
-          <Route path="login" element={<LoginForm />} />
-          <Route path="register" element={<Register />} />
+          <Route exact path="/book" element={
+            <PrivateRoute fallbackRoute={"/login"}><Book /></PrivateRoute>}/>
+
+          {/* <Route path="book" element={<Book />} /> */}
+
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/register" element={<Register />} />
         </Route>
       </Routes>
     </div>
-
   );
 }
