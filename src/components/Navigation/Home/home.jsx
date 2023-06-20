@@ -4,7 +4,7 @@ const Home = () => {
 
 
       <main>
-        <h2 > Its You Phonebook </h2>
+        <h2 > Its You Phone book </h2>
         {/* <h5> Enter in Account </h5> */}
 
         {/* <Suspense fallback={<Loading />}>
