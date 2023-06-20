@@ -1,7 +1,7 @@
 
 // import { Suspense } from 'react';
 // import { NavLink, Outlet } from 'react-router-dom';
-// import css from './home.module.css';
+// import css from './Home.module.css';
 import Loading from 'components/Loading';
 
 const Home = () => {
