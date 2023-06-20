@@ -1,8 +1,4 @@
-// import { } from 'redux/auth/auth-selectors';
-// import React from 'react';
-// // import css from './LogIn.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-// // import { addContact, listContacts } from 'redux/contactAPI';
 import { logOut } from 'redux/auth/auth-operations';
 import defaultAvatar from 'default-avatar.jpg';
 import { NavLink } from 'react-router-dom';
@@ -43,11 +39,6 @@ const avatar = defaultAvatar;
        </div>
      </nav>
 
-     <main>
-       {/* <Suspense fallback={<Loading />}>
-          <Outlet />
-        </Suspense> */}
-     </main>
      <footer></footer>
    </>
  );

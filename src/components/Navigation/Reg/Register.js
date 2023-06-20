@@ -2,7 +2,6 @@ import React from 'react';
 import css from './Register.module.css';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { addContact, listContacts } from 'redux/contactAPI';
 import { register } from 'redux/auth/auth-operations';
 
 export default function Register() {
@@ -11,10 +10,6 @@ export default function Register() {
   const [password, setPassword] = useState();
 
   const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(listContacts());
-  // }, [dispatch]);
 
   const handleChange = e => {
     const { name, value } = e.currentTarget;
@@ -59,7 +54,6 @@ export default function Register() {
             onChange={handleChange}
             name="name"
             placeholder="First Name/Last Name"
-            // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
           />
@@ -73,8 +67,6 @@ export default function Register() {
             onChange={handleChange}
             name="email"
             placeholder="exemple@mail.com"
-            // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            // title="Please input correct mail. (Exemple: user@mail.com)"
             required
           />
         </label>

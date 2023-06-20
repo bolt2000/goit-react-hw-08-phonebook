@@ -2,7 +2,6 @@ import React from 'react';
 import css from './LogIn.module.css';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { addContact, listContacts } from 'redux/contactAPI';
 import { logIn } from 'redux/auth/auth-operations';
 
 export default function LoginForm() {
