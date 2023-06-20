@@ -7,7 +7,7 @@ export default function HeadNav () {
  return (
    <>
      <nav className={css.ul}>
-       <ul className={css.ul}>
+       <ul className={css.ul_nav}>
          <li className={css.li}>
            <NavLink to="/">Home</NavLink>
          </li>

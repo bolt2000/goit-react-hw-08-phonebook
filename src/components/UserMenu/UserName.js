@@ -18,7 +18,7 @@ const avatar = defaultAvatar;
  return (
    <>
      <nav>
-       <ul>
+       <ul className={css.ul_nav}>
          <li>
            <NavLink to="/">Home</NavLink>
          </li>
@@ -27,7 +27,7 @@ const avatar = defaultAvatar;
          </li>
        </ul>
        <div className={css.menu}>
-         <img className={css.img} srv= {avatar} alt="" width="32" height="32" />
+         <img className={css.img} srv={avatar} alt="" width="32" height="32" />
          <span className={css.span}>Welcome, {name.name}</span>
          <button
            className={css.btn}

@@ -1,6 +1,6 @@
 
 import { useSelector } from 'react-redux';
-import { Navigate, Route } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { selectIsLoggedIn } from 'redux/auth/auth-selectors';
 // import css from '../Layout.module.css';
 
@@ -21,7 +21,7 @@ import { selectIsLoggedIn } from 'redux/auth/auth-selectors';
 
 
 
-function PrivateRoute({ children, fallbackRoute = '/' }) {
+function PrivateRoute({ children, fallbackRoute = '/book' }) {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <>

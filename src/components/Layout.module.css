@@ -1,4 +1,4 @@
-ul {
+.ul_nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -39,7 +39,6 @@ a:hover:not(.active) {
   /* overflow: hidden; */
   /* background-color: orange;*/
   border-radius: 5px;
-  /* border: 1px solid black; */
 }
 
 .btn {
@@ -47,9 +46,7 @@ a:hover:not(.active) {
   border-radius: 5px;
   padding: 12px 25px;
   font-weight: 500;
-  /* display: flex; */
   align-items: center;
-  /* margin-top: 20px; */
   margin-left: auto;
   border-radius: 5px;
 }
@@ -76,11 +73,9 @@ a:hover:not(.active) {
 }
 
 .hero {
-   /* display: block; */
-  /* border: 1px solid pink; */
-  /* /* padding-left: 10; * */
-  /* align-items: center; */
-  /* margin: 20; */
+  border: none;
+  /* padding-left: 100; */
+  margin: auto;
   width: 640px;
   height: 474px;
   background-color: white;

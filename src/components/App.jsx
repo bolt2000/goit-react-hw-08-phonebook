@@ -42,7 +42,7 @@ export const App = () => {
 
 
           <Route exact path="/book" element={
-            <PrivateRoute fallbackRoute={"/login"}><Book /></PrivateRoute>}/>
+            <PrivateRoute fallbackRoute={"/"}><Book /></PrivateRoute>}/>
 
           {/* <Route path="book" element={<Book />} /> */}
 

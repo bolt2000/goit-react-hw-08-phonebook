@@ -1,22 +1,27 @@
 .List {
   margin-top: 20px;
   list-style: none;
-  /* padding: 1%; */
 }
 .ContactItem {
-  width: 488px;
-  padding: 5px;
-  /* border: 1px solid black; */
+  width: 90%;
+
   border-radius: 5px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* margin-bottom: 10px; */
-  /* padding-bottom: 10px; */
+
+padding: 10px 30px;
+background: linear-gradient(to left, #f8ab8d 0%, white, #f8ab8d);
+border-bottom: 1px solid grey;
+color: black;
+font-size: 20px;
+box-shadow: 0 5px 5px 0 rgba(0,0,0, .2);
+margin-bottom: 5px;
+
+
 }
-.ContactItem:last-child {
-  margin-bottom: 0%;
-}
+
+.ContactItem:last-child {border-bottom: none;}
+
+
 .ContactItemText {
   font-size: 15px;
   line-height: 1, 2em;
@@ -30,23 +35,63 @@
 
 .button {
   cursor: pointer;
-  /* border-radius: 5px; */
   padding: 12px 15px;
   font-weight: 500;
   display: flex;
   align-items: center;
-  /* margin-top: 20px; */
+  margin-top: 5px;
   margin-left: auto;
   border-radius: 5px;
+
+ display: inline-block;
+    box-sizing: border-box;
+    padding: 0 15px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1a73e8;
+    position: relative;
+    overflow:hidden;
+    vertical-align: top;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    z-index: 1;
+
+
+
 }
 
 .button:hover,
 .button:focus {
-  color: white;
-  background-color: red;
-  border: 3px solid black;
+box-shadow: 0 1px 2px 0 rgb(26 115 232 / 45%), 0 1px 3px 1px rgb(26 115 232 / 30%);
+    background-color: #297be6;
+
+
+
 }
 
 .button span {
   margin-right: 15px;
+   position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: btn_ripples 0.6s linear infinite;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 5px;
 }
