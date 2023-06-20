@@ -1,27 +1,23 @@
 import { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import css from './Layout.module.css';
+// import css from './Layout.module.css';
 import Loading from 'components/Loading';
+import HeadNav from 'components/Navigation/HeadNav/HeadNav';
+import AuthNav from 'components/Navigation/AuthNav';
+import UserName from './UserMenu/UserName';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from 'redux/auth/auth-selectors';
 
 export const Layout = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <>
-      <header className={css.header}>
-        <nav>
-          <ul className={css.nav}>
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/movies">Movies</NavLink>
-            </li>
-          </ul>
-        </nav>
-        <div class="wrap-logo">
-          <a href="index.html" class="logo">
-            <img src={'../img/kino.png'} width={160} alt="" />
-          </a>
-        </div>
+      <header >
+        {/* <AuthNav /> */}
+        {isLoggedIn ? <UserName /> : <HeadNav />}
+
+        {/* <HeadNav />
+        <UserName /> */}
       </header>
       <main>
         <Suspense fallback={<Loading />}>

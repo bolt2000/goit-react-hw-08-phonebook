@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Audio } from 'react-loader-spinner';
 
 const Loading = () => {
@@ -20,8 +20,8 @@ const Loading = () => {
   );
 };
 
-Loading.propTypes = {
-  moviesData: PropTypes.array.isRequired,
-};
+// Loading.propTypes = {
+//   moviesData: PropTypes.array.isRequired,
+// };
 
 export default Loading;

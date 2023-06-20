@@ -1,52 +1,70 @@
-* {
-  box-sizing: border-box;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: orange;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+li {
+    float: left;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background-color: #ffeb3b;
-  padding: 20px 10px;
-  background: url(../img/keit.jpg) no-repeat;
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.wrap-logo {
-  display: flex;
+a:hover:not(.active) {
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
 
+.active {
+background-color:#4CAF50;
+}
+
+
+.menu {
+   display: flex;
+   list-style-type: none;
+    margin-top: 10px;
+    padding: 0 1 0 100;
+    /* overflow: hidden; */
+    /* background-color: orange;*/
+    border-radius: 5px;
+    /* border: 1px solid black; */
+}
+
+.btn {
+cursor: pointer;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-weight: 500;
+  /* display: flex; */
   align-items: center;
+  /* margin-top: 20px; */
+  margin-left: auto;
+  border-radius: 5px;
+
 }
 
-header a {
-  color: white;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 25px;
-  border-radius: 4px;
+.img {
+  /* margin: auto; */
+  margin-top: 8px;
+   margin-left: 0px;
+
+
 }
 
-header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-header a:hover {
-  background-color: #fbc02d;
-  color: #212121;
-}
-
-header a.active {
-  background-color: #fbc02d;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  list-style: none;
+.span {
+  /* border: 1px solid black; */
+/* padding-left: 10; */
+margin-left: 20px;
+margin-top: 10px;
 }
