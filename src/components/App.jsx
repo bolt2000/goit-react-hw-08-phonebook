@@ -55,5 +55,6 @@ export const App = () => {
         </Route>
       </Routes>
     </div>
+    
   );
 }
