@@ -1,46 +1,15 @@
-
 import { useSelector } from 'react-redux';
-import { Navigate, Route } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { selectIsLoggedIn } from 'redux/auth/auth-selectors';
-// import css from '../Layout.module.css';
 
-
-
-// function PrivateRoute({children, ...routeProps}) {
-//   console.log(routeProps);
-//   const isLoggedIn = useSelector(selectIsLoggedIn);
-//   return (
-
-//        <Route {...routeProps}>
-//       {isLoggedIn ? children : <Navigate to="/home" />}
-//       </Route>
-
-//   );
-
-// }
-
-
-
-function PrivateRoute({ children, fallbackRoute = '/' }) {
-  console.log((fallbackRoute = '/'));
+function PublicRoute({
+  children,
+  fallbackRoute = '/book',
+  restricted = false,
+}) {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  return (
-    <>
-      {isLoggedIn ? (
-        children
-      ) : (
-        <>
-          <Navigate
-            to={fallbackRoute}
-            /*state={ {from: location} } */ replace={true}
-          />
-          {/* {showRedirectNote()} */}
-        </>
-      )}
-    </>
-  );
+  const shouldRedirect = isLoggedIn && restricted;
+
+  return <>{shouldRedirect ? <Navigate to={fallbackRoute} /> : children}</>;
 }
-
-export default PrivateRoute
-
-
+export default PublicRoute;

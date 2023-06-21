@@ -2,26 +2,25 @@
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import { selectIsLoggedIn } from 'redux/auth/auth-selectors';
-// import css from '../Layout.module.css';
+// import { observer } from 'mobx-react-lite';
+// import Book from './Navigation/Book/Book';
 
 
+// const PrivateRoute = (routeProps) => {
 
-// function PrivateRoute({children, ...routeProps}) {
-//   console.log(routeProps);
-//   const isLoggedIn = useSelector(selectIsLoggedIn);
+// const isLoggedIn = useSelector(selectIsLoggedIn);
+
 //   return (
+//   <Route {...routeProps}>
+//     {isLoggedIn ? <Navigate to="/book" /> : <Navigate to="/login" />}
+//   </Route>
 
-//        <Route {...routeProps}>
-//       {isLoggedIn ? children : <Navigate to="/home" />}
-//       </Route>
+//   )
+// };
 
-//   );
+// export default PrivateRoute;
 
-// }
-
-
-
-function PrivateRoute({ children, fallbackRoute = '/book' }) {
+function PrivateRoute({ children, fallbackRoute = '/' }) {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <>
@@ -29,11 +28,7 @@ function PrivateRoute({ children, fallbackRoute = '/book' }) {
         children
       ) : (
         <>
-          <Navigate
-            to={fallbackRoute}
-            /*state={ {from: location} } */ replace={true}
-          />
-          {/* {showRedirectNote()} */}
+          <Navigate to={fallbackRoute} replace={true}/>
         </>
       )}
     </>
