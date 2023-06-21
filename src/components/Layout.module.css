@@ -80,9 +80,11 @@ a:hover:not(.active) {
   height: 474px;
   background-color: white;
   background-image:
-    url('../img/books.png');
+    url('../img/books.png'),
+    url('../../src/img/white.jpg');
       background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-color: yellow; */
 }
 

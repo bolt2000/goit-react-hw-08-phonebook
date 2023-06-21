@@ -12,9 +12,6 @@ export default function HeadNav () {
            <NavLink to="/">Home</NavLink>
          </li>
          <li>
-           <NavLink to="/login">Book</NavLink>
-         </li>
-         <li>
            <NavLink to="/register">Register</NavLink>
          </li>
          <li>
