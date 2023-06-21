@@ -40,7 +40,7 @@ export const fetchCurrentUser = createAsyncThunk(
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
-    console.log(persistedToken);
+    // console.log(persistedToken);
 
     if (persistedToken === null) {
       return thunkAPI.rejectWithValue('Error');
@@ -55,11 +55,3 @@ export const fetchCurrentUser = createAsyncThunk(
   }
 );
 
-// const operations = {
-//   register,
-//   logIn,
-//   logOut,
-//   fetchCurrentUser,
-// }
-
-// export default operations;
