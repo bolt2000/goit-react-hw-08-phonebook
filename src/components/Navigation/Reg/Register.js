@@ -67,7 +67,7 @@ export default function Register() {
             onChange={handleChange}
             name="email"
             placeholder="exemple@mail.com"
-            pattern="^[A-Za-z0-9][A-Za-z0-9\.\-_]"
+            pattern="^[A-Za-z0-9][A-Za-z0-9\.-_]*[A-Za-z0-9]*@([A-Za-z0-9]+([A-Za-z0-9-]*[A-Za-z0-9]+)*\.)+[A-Za-z]*$"
             title="Please correct email"
             required
           />
