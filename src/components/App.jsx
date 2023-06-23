@@ -18,8 +18,6 @@ export const App = () => {
   const dispatch = useDispatch();
   const isFetchCurrentUser = useSelector(selectIsRefreshing);
 
-  console.log('isFetchCurrentUser:', isFetchCurrentUser);
-
   useEffect(() => {
     dispatch(fetchCurrentUser());
   }, [dispatch]);

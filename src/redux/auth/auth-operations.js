@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import Notiflix from 'notiflix';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
@@ -17,7 +18,9 @@ export const register = createAsyncThunk('auth/register', async credentials => {
     const { data } = await axios.post('/users/signup', credentials);
     token.set(data.token);
     return data;
-  } catch (error) {}
+  } catch (error) {
+    Notiflix.Notify.success('Sol lucet omnibus');
+  }
 });
 
 export const logIn = createAsyncThunk('auth/login', async credentials => {
@@ -25,14 +28,23 @@ export const logIn = createAsyncThunk('auth/login', async credentials => {
     const { data } = await axios.post('/users/login', credentials);
     token.set(data.token);
     return data;
-  } catch (error) {}
+    // eslint-disable-next-line no-unreachable
+    Notiflix.Notify.success
+      ('You success login in account');
+
+  } catch (error) {
+Notiflix.Notify.warning('No correct password or mail');
+  }
 });
 
 export const logOut = createAsyncThunk('auth/logout', async () => {
   try {
     await axios.post('/users/logout');
     token.unset();
-  } catch (error) {}
+    Notiflix.Notify.success('Success logout');
+  } catch (error) {
+
+  }
 });
 
 export const fetchCurrentUser = createAsyncThunk(
@@ -40,7 +52,6 @@ export const fetchCurrentUser = createAsyncThunk(
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
-    // console.log(persistedToken);
 
     if (persistedToken === null) {
       return thunkAPI.rejectWithValue('Error');
@@ -54,4 +65,3 @@ export const fetchCurrentUser = createAsyncThunk(
     } catch (error) {}
   }
 );
-
