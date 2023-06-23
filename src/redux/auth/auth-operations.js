@@ -18,8 +18,10 @@ export const register = createAsyncThunk('auth/register', async credentials => {
     const { data } = await axios.post('/users/signup', credentials);
     token.set(data.token);
     return data;
+    // eslint-disable-next-line no-unreachable
+    Notiflix.Notify.success('You success registration site');
   } catch (error) {
-    Notiflix.Notify.success('Sol lucet omnibus');
+    Notiflix.Notify.failure('User is not create (no correct data)');
   }
 });
 

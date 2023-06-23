@@ -62,11 +62,13 @@ export default function Register() {
           Mail
           <input
             className={css.submit}
-            type="mail"
+            type="email"
             value={email}
             onChange={handleChange}
             name="email"
             placeholder="exemple@mail.com"
+            pattern="^[A-Za-z0-9][A-Za-z0-9\.\-_]"
+            title="Please correct email"
             required
           />
         </label>
